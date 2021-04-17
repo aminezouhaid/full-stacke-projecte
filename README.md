@@ -1,2 +1,2 @@
-# full-stacke-projecte
- projet de Application de gestion des contacts
+# full-stack-project
+Application de gestion des contacts
