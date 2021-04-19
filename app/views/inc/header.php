@@ -15,7 +15,7 @@
               
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                 <form class="d-flex ">
-                  <a class="btn btn-outline-light bg-dark navbar-light text-light" type="button" href="index.html"> Login </a>
+                  <a class="btn btn-outline-light bg-dark navbar-light text-light" type="button" href="index.html"> home </a>
                 </form>
               </div>
           </nav>
