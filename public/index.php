@@ -1,6 +1,5 @@
-<?php 
-	require_once '../app/bootstrap.php';
+<?php
+  require_once '../app/bootstrap.php';
 
-	// init Core Librairy
-	$init = new Core;
-?>
+  // Init Core Library
+  $init = new Core;
