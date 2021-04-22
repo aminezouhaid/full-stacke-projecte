@@ -2,7 +2,7 @@
 
     define('DB-HOST','localhost');
 	define('DB-USER','root');
-    define('DB-PASS','');
+    define('DB-PASS','1');
     define('DB-NAME','mycontacts');
 
 
