@@ -1,30 +1,31 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-  <a href="<?php echo URLROOT; ?>/contacts" class="btn btn-light"><i class="fa fa-backward"></i> Back</a>
-  <div class="card card-body bg-light mt-5">
-    <h2>Edit Post</h2>
-    <p>Create a post with this form</p>
-    <form action="<?php echo URLROOT; ?>/contacts/edit/<?php echo $data['id']; ?>" method="post">
-      <div class="form-group">
-        <label for="name">Name: <sup>*</sup></label>
-        <input type="text" name="name" class="form-control form-control-lg <?php echo (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['name']; ?>">
-        <span class="invalid-feedback"><?php echo $data['name_err']; ?></span>
-      </div>
-      <div class="form-group">
-        <label for="number">Number: <sup>*</sup></label>
-        <textarea name="number" class="form-control form-control-lg <?php echo (!empty($data['number_err'])) ? 'is-invalid' : ''; ?>"><?php echo $data['number']; ?></textarea>
-        <span class="invalid-feedback"><?php echo $data['number_err']; ?></span>
-      </div>
-      <div class="form-group">
-        <label for="email">Email: <sup>*</sup></label>
-        <textarea name="email" class="form-control form-control-lg <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>"><?php echo $data['email']; ?></textarea>
-        <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
-      </div>
-      <div class="form-group">
-        <label for="address">Address: <sup>*</sup></label>
-        <textarea name="address" class="form-control form-control-lg <?php echo (!empty($data['address_err'])) ? 'is-invalid' : ''; ?>"><?php echo $data['address']; ?></textarea>
-        <span class="invalid-feedback"><?php echo $data['address_err']; ?></span>
-      </div>
-      <input type="submit" class="btn btn-success" value="Submit">
-    </form>
-  </div>
+<a href="<?php echo URLROOT; ?>/contacts" class="btn btn-light"><i class="fa fa-backward"></i> Back</a>
+  <div class="m-5">
+        <div>
+            <h2 class="mt-2">Edit contact</h2>
+        </div>
+        <?php foreach ($data as $row) : ?>
+        <form action="href=<?php echo URLROOT; ?>/Contacts/edit" method="POST" class="row g-3 col-11 m-auto">
+            <div class="col-md-6">
+              <label for="" class="form-label">Name</label>
+              <input type="text" name="name" class="form-control" value="<?php echo $row['name']; ?>">
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label">Phone</label>
+              <input type="tel" name="number" class="form-control" value="<?php echo $row['number']; ?>">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" value="<?php echo $row['email']; ?>">
+            </div>
+            <div class="col-12">
+              <label for="" class="form-label">Address</label>
+              <input type="text" name="address" class="form-control" value="<?php echo $row['address']; ?>">
+            </div>
+            <div class="col-12">
+              <button type="submit" name="submit_edit" class="btn btn-primary mt-2 ml-5">Edit</button>
+            </div>
+        </form>
+        <?php endforeach; ?>
+    </div>
 <?php require APPROOT . '/views/inc/footer.php'; ?>

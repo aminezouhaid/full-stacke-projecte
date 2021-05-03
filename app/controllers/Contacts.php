@@ -48,6 +48,40 @@
     header('location:' . URLROOT . '/' . 'Contacts/index');
   }
 
+  // public function edit() {
+  //   $data = [
+  //     'id' => $_GET['id']
+  //   ];
+  //   $this->contactModel->getOneContact($data);
+  // }
+
+  public function one() {
+    $contact = $this->contactModel->getOneContact($id);
+    $user = $this->userModel->getUserById($contact->user_id);
+
+      $data = [
+        'contact' => $contact,
+        'user' => $user
+      ];
+
+      $this->view('contacts/edit', $data);
+
+
+
+    // if (isset($_GET['id'])) {
+    //   $data = [
+    //     'id' => $_GET['id']
+    //   ];
+
+    //   $contact = $this->contactModel->getOneContact($data);
+
+    //   return $contact;
+
+    //   $this->view('contacts/edit', $contact);
+    // }
+
+  }
+
 
 
 

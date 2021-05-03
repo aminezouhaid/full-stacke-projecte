@@ -42,6 +42,27 @@
       }
     }
 
+    public function getOneContact($data) {
+      $this->db->query('SELECT * FROM contacts WHERE id = :id');
+      $this->db->bind(':id', $id);
+
+      $row = $this->db->single();
+
+      return $row;
+
+
+
+      // $this->db->query("SELECT * FROM contacts WHERE id = :id");
+
+      // $this->db->bind(':id', $data['id']);
+      
+      // if ($this->db->single()) {
+      //   return true;
+      // } else {
+      //   return false;
+      // }
+    }
+
 
 
 

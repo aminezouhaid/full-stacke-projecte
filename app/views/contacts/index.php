@@ -24,7 +24,7 @@
                             <td><?php echo $row->number ; ?></td>
                             <td><?php echo $row->address ; ?></td>
                             <td><?php echo $row->email ; ?></td>
-                            <td> <a href="<?php echo URLROOT; ?>/UsersControllers/getOne?id=<?php echo $row->id; ?>" class="btn btn-success">Update</a>  <a href="<?php echo URLROOT; ?>/Contacts/delete?id=<?php echo $row->id; ?>" class="btn btn-danger">Delete</a>
+                            <td> <a href="<?php echo URLROOT; ?>/Contacts/one?id=<?php echo $row->id; ?>" class="btn btn-success">Update</a>  <a href="<?php echo URLROOT; ?>/Contacts/delete?id=<?php echo $row->id; ?>" class="btn btn-danger">Delete</a>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
